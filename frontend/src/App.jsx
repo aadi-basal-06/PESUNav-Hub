@@ -5,13 +5,18 @@ import Register from "./pages/Register";
 
 export default function App() {
   return (
-    <div>
-      <nav style={{ padding: "1rem", borderBottom: "1px solid #eee" }}>
-        <Link to="/" style={{ marginRight: 12 }}>Home</Link>
-        <Link to="/login" style={{ marginRight: 12 }}>Login</Link>
-        <Link to="/register">Register</Link>
+    <div className="app-container">
+      <nav style={{ 
+        padding: "1rem", 
+        background: "var(--color-royal-purple)", 
+        borderBottom: "2px solid var(--color-rebecca-purple)",
+        borderRadius: "12px 12px 0 0"
+      }}>
+        <Link to="/" style={{ marginRight: 12, color: "var(--color-pistachio)", fontWeight: 600 }}>Home</Link>
+        <Link to="/login" style={{ marginRight: 12, color: "var(--color-pistachio)", fontWeight: 600 }}>Login</Link>
+        <Link to="/register" style={{ color: "var(--color-pistachio)", fontWeight: 600 }}>Register</Link>
       </nav>
-      <main style={{ padding: "2rem" }}>
+      <main style={{ padding: "2rem", background: "#fff", minHeight: "400px" }}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
