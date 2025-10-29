@@ -4,7 +4,7 @@
 
 ---
 
-![Logo](./image.jpeg)
+![Logo](./img1.png)
 
 ---
 
