@@ -1,20 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 
 :root {
-  --color-rebecca-purple: #653496;
-  --color-royal-purple:   #7B52AE;
-  --color-bud-green:      #74B652;
-  --color-pistachio:      #94C773;
-  --color-maximum-green:  #56941E;
-  --color-blue-violet:    #471871;
+  --color-navy-blue: #12214A;        /* Deep navy blue base */
+  --color-medium-navy: #1C2A6D;      /* Lighter navy accent */
+  --color-light-navy: #6A7CB0;       /* Muted navy highlight */
+  --color-neon-pink: #FF2ACB;        /* Bold neon pink */
+  --color-soft-pink: #FF75DA;        /* Lighter pink accent */
+  --color-white: #FFFFFF;            /* For backgrounds/text */
+  --color-golden-yellow: #FFD700;    /* For outlines */
 
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-  color: var(--color-blue-violet);
-  background-color: var(--color-pistachio);
-
+  color: var(--color-neon-pink);
+  background-color: var(--color-navy-blue);
   line-height: 1.5;
   font-weight: 400;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -26,26 +25,25 @@ body {
   min-width: 320px;
   min-height: 100vh;
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-  background: var(--color-pistachio);
-  color: var(--color-blue-violet);
+  background: var(--color-navy-blue);
+  color: var(--color-neon-pink);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-
 a {
   font-weight: 600;
-  color: var(--color-rebecca-purple);
+  color: var(--color-neon-pink);
   text-decoration: none;
   transition: color 0.2s;
 }
 a:hover {
-  color: var(--color-bud-green);
+  color: var(--color-soft-pink);
 }
 
 h1, h2, h3, h4, h5 {
-  color: var(--color-royal-purple);
+  color: var(--color-neon-pink);
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 }
 
@@ -56,59 +54,64 @@ h1 {
 
 button {
   border-radius: 8px;
-  border: 1px solid var(--color-rebecca-purple);
+  border: 2px solid var(--color-neon-pink);
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 600;
   font-family: inherit;
-  background-color: var(--color-maximum-green);
-  color: var(--color-pistachio);
+  background-color: var(--color-soft-pink);
+  color: var(--color-navy-blue);
   cursor: pointer;
   transition: border-color 0.25s, background-color 0.25s, color 0.25s;
 }
 button:hover {
-  border-color: var(--color-bud-green);
-  background-color: var(--color-royal-purple);
-  color: #fff;
+  background-color: var(--color-neon-pink);
+  color: var(--color-white);
 }
 button:focus, button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-input, textarea {
+input, textarea, select {
   font-family: inherit;
-  border: 1px solid var(--color-rebecca-purple);
+  border: 1px solid var(--color-neon-pink);
   border-radius: 6px;
   padding: 10px;
   margin: 8px 0;
   width: 100%;
-  background: #fff;
-  color: var(--color-blue-violet);
+  background: var(--color-white);
+  color: var(--color-navy-blue);
   box-sizing: border-box;
   transition: border-color 0.25s;
+  outline: 2px solid var(--color-golden-yellow);
+  outline-offset: 2px;
 }
-input:focus, textarea:focus {
-  border-color: var(--color-bud-green);
-  outline: none;
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--color-neon-pink);
+  outline-color: #FFB700;
+  outline-offset: 4px;
+  box-shadow: 0 0 8px 2px rgba(255, 215, 0, 0.7);
 }
 
 nav {
-  background: var(--color-royal-purple);
-  border-bottom: 2px solid var(--color-rebecca-purple);
+  background: var(--color-medium-navy);
+  border-bottom: 2px solid var(--color-neon-pink);
   padding: 1rem;
+  border-radius: 12px 12px 0 0;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: var(--color-blue-violet);
-    background-color: var(--color-pistachio);
+    color: var(--color-neon-pink);
+    background-color: var(--color-light-navy);
   }
   a:hover {
-    color: var(--color-pistachio);
+    color: var(--color-soft-pink);
   }
   button {
-    background-color: var(--color-bud-green);
-    color: #fff;
+    background-color: var(--color-soft-pink);
+    color: var(--color-navy-blue);
   }
 }
 
@@ -117,8 +120,13 @@ nav {
   min-width: 330px;
   margin: 3rem auto;
   padding: 2rem 1.5rem;
-  background: #fff;
+  background: var(--color-white);
   border-radius: 20px;
-  box-shadow: 0 6px 24px rgba(103,52,150, 0.10);
-  /* Try background: var(--color-pistachio) for color mode! */
+  box-shadow: 0 6px 24px rgba(18, 33, 74, 0.10);
+}
+
+hr {
+  border: none;
+  border-top: 2px solid var(--color-neon-pink);
+  margin: 0 0 2rem 0;
 }

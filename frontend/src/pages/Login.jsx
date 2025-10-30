@@ -20,14 +20,27 @@ export default function Login() {
   };
 
   return (
-    <section style={{ maxWidth: 420, margin: "0 auto" }}>
-      <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
+      <section>
+        <h2>Login</h2>
+        <form onSubmit={handleSubmit} style={{ maxWidth: 650, margin: "0 auto" }}>
         <input name="email" type="email" placeholder="Email" value={form.email} onChange={handleChange} required style={{ width: "100%", padding: 10, margin: "8px 0" }} />
         <input name="password" type="password" placeholder="Password" value={form.password} onChange={handleChange} required style={{ width: "100%", padding: 10, margin: "8px 0" }} />
-        <button type="submit" style={{ padding: "10px 16px" }}>Login</button>
-      </form>
-      {status && <p style={{ marginTop: 12 }}>{status}</p>}
-    </section>
-  );
+          <div style={{ textAlign: "center", marginTop: "1.5rem" }}>
+            <button
+              type="submit"
+              style={{
+                padding: "10px 24px",
+                fontWeight: 600,
+                border: "2px solid var(--color-golden-yellow)",
+                borderRadius: "8px",
+                background: "#fff",
+                color: "var(--color-dark-brown)",
+                cursor: "pointer"
+              }}>
+              Login
+            </button>
+          </div>
+        </form>
+      </section>
+    );
 }
