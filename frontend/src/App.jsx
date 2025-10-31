@@ -14,30 +14,21 @@ import About from "./pages/About";
 export default function App() {
   return (
     <div className="app-container">
-      <nav style={{
-        padding: "1rem",
-        background: "var(--color-medium-brown)",
-        borderBottom: "2px solid var(--color-dark-brown)",
-        borderRadius: "12px 12px 0 0"
-      }}>
-        <Link to="/" style={{ marginRight: 12, color: "var(--color-light-brown)", fontWeight: 600 }}>Home</Link>
-        <Link to="/login" style={{ marginRight: 12, color: "var(--color-light-brown)", fontWeight: 600 }}>Login</Link>
-        <Link to="/register" style={{ color: "var(--color-light-brown)", fontWeight: 600 }}>Register</Link>
-        <Link to="/profile" style={{ color: "var(--color-soft-pink)", fontWeight: 600 }}>Profile</Link>
-        <Link to="/map" style={{ color: "var(--color-soft-pink)", fontWeight: 600 }}>Map</Link>
-        <Link to="/events" style={{ color: "var(--color-soft-pink)", fontWeight: 600 }}>Events</Link>
-        <Link to="/study-spaces" style={{ color: "var(--color-soft-pink)", fontWeight: 600 }}>Study Spaces</Link>
-        <Link to="/services" style={{ color: "var(--color-soft-pink)", fontWeight: 600 }}>Services</Link>
-        <Link to="/feedback" style={{ color: "var(--color-soft-pink)", fontWeight: 600 }}>Feedback</Link>
-        <Link to="/safety" style={{ color: "var(--color-soft-pink)", fontWeight: 600 }}>Safety</Link>
-        <Link to="/about" style={{ color: "var(--color-soft-pink)", fontWeight: 600 }}>About</Link>
+      <nav className="nav-bar">
+        <Link to="/">Home</Link>
+        <Link to="/login">Login</Link>
+        <Link to="/register">Register</Link>
+        <Link to="/profile">Profile</Link>
+        <Link to="/map">Map</Link>
+        <Link to="/events">Events</Link>
+        <Link to="/study-spaces">Study Spaces</Link>
+        <Link to="/services">Services</Link>
+        <Link to="/feedback">Feedback</Link>
+        <Link to="/safety">Safety</Link>
+        <Link to="/about">About</Link>
       </nav>
-      <hr style={{
-        border: "none",
-        borderTop: "2px solid var(--color-golden-yellow)",
-        margin: "0 0 2rem 0"
-      }} />
-      <main style={{ padding: "2rem", background: "#fff", minHeight: "400px" }}>
+      <hr />
+      <main className="content-area">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />

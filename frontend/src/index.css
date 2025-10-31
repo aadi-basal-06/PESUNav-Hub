@@ -116,7 +116,7 @@ nav {
 }
 
 .app-container {
-  max-width: 900px;
+  max-width: 1200px;
   min-width: 330px;
   margin: 3rem auto;
   padding: 2rem 1.5rem;
@@ -129,4 +129,30 @@ hr {
   border: none;
   border-top: 2px solid var(--color-neon-pink);
   margin: 0 0 2rem 0;
+}
+
+/* Navigation bar spacing and layout */
+.nav-bar a {
+  margin-right: 12px;
+}
+.nav-bar a:last-child {
+  margin-right: 0;
+}
+
+/* Main content area */
+.content-area {
+  min-height: 400px;
+  background: var(--color-white);
+}
+
+/* Home page hero styles */
+.home-hero {
+  text-align: center;
+  padding: 2rem;
+}
+.hero-logo {
+  margin: 1.5rem auto 0;
+  width: 150px;
+  height: auto;
+  display: block;
 }
