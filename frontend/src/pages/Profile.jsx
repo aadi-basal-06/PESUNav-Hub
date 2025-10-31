@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 
 const DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+const DEFAULT_AVATAR = "https://cdn.builder.io/api/v1/image/assets%2Fb07d8b24589c491fafbc50f7886a2e1d%2F79b06a1d8c2f41f08fffda9915416cbf?format=webp&width=800";
 
 function readLS(key, fallback) {
   try {
@@ -41,8 +42,7 @@ export default function Profile() {
         instructor: "Dr. Smith",
         day: "Monday",
         time: "09:00",
-        room: "Room 301",
-        reminder: true
+        room: "Room 301"
       },
       {
         id: crypto.randomUUID(),
@@ -50,8 +50,7 @@ export default function Profile() {
         instructor: "Prof. Johnson",
         day: "Monday",
         time: "11:00",
-        room: "Room 205",
-        reminder: true
+        room: "Room 205"
       },
       {
         id: crypto.randomUUID(),
@@ -59,8 +58,7 @@ export default function Profile() {
         instructor: "Dr. Williams",
         day: "Tuesday",
         time: "14:00",
-        room: "Lab 401",
-        reminder: false
+        room: "Lab 401"
       }
     ])
   );
@@ -76,7 +74,7 @@ export default function Profile() {
   );
 
   const [showAdd, setShowAdd] = useState(false);
-  const [form, setForm] = useState({ title: "", instructor: "", day: "Monday", time: "09:00", room: "", reminder: true });
+  const [form, setForm] = useState({ title: "", instructor: "", day: "Monday", time: "09:00", room: "" });
 
   const handleImgChange = e => {
     const file = e.target.files?.[0];
@@ -90,22 +88,17 @@ export default function Profile() {
     e.preventDefault();
     const newItem = { id: crypto.randomUUID(), ...form };
     setClasses(prev => [...prev, newItem]);
-    setForm({ title: "", instructor: "", day: "Monday", time: "09:00", room: "", reminder: true });
+    setForm({ title: "", instructor: "", day: "Monday", time: "09:00", room: "" });
     setShowAdd(false);
   };
 
-  const toggleReminder = id => setClasses(prev => prev.map(c => (c.id === id ? { ...c, reminder: !c.reminder } : c)));
   const removeClass = id => setClasses(prev => prev.filter(c => c.id !== id));
 
   return (
     <section className="profile-page">
       <div className="profile-header">
         <div className="avatar-wrapper">
-          {previewUrl ? (
-            <img className="avatar-image" src={previewUrl} alt="Student avatar" />
-          ) : (
-            <div className="avatar-placeholder" aria-hidden="true">👤</div>
-          )}
+          <img className="avatar-image" src={previewUrl || DEFAULT_AVATAR} alt="Student avatar" />
           <label className="upload-button">
             <input type="file" accept="image/*" onChange={handleImgChange} />
             Upload Image
@@ -169,10 +162,6 @@ export default function Profile() {
                 <label htmlFor="room">Room</label>
                 <input id="room" name="room" value={form.room} onChange={e => setForm(f => ({ ...f, room: e.target.value }))} />
               </div>
-              <div className="checkbox-row">
-                <input id="reminder" name="reminder" type="checkbox" checked={form.reminder} onChange={e => setForm(f => ({ ...f, reminder: e.target.checked }))} />
-                <label htmlFor="reminder">Reminder On</label>
-              </div>
             </div>
             <div className="add-actions">
               <button className="auth-submit-button" type="submit">Save Class</button>
@@ -205,13 +194,9 @@ export default function Profile() {
                 <div className="class-meta-row">
                   <div className="meta-item">⏰ {item.time}</div>
                   <div className="meta-item">📍 {item.room}</div>
-                  <div className="meta-item">{item.reminder ? "Reminder On" : "Reminder Off"}</div>
                 </div>
 
                 <div className="class-actions-row">
-                  <button className={`reminder-toggle ${item.reminder ? "is-on" : "is-off"}`} onClick={() => toggleReminder(item.id)}>
-                    {item.reminder ? "Disable Reminder" : "Enable Reminder"}
-                  </button>
                   <button className="delete-button" onClick={() => removeClass(item.id)} aria-label="Delete class">🗑️</button>
                 </div>
               </article>
