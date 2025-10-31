@@ -53,19 +53,20 @@ export default function Register() {
           <input id="name" name="name" placeholder="John Doe" value={form.name} onChange={handleChange} required />
 
           <label className="field-label" htmlFor="email">Email</label>
-          <input id="email" name="email" type="email" placeholder="your.email@pes.edu" value={form.email} onChange={handleChange} required />
+          <input id="email" name="email" type="email" placeholder="your.email@gmail.com" value={form.email} onChange={handleChange} required />
 
           <label className="field-label" htmlFor="studentId">Student ID</label>
-          <input id="studentId" name="studentId" placeholder="PES1234567" value={form.studentId} onChange={handleChange} />
+          <input id="studentId" name="studentId" placeholder="PES2UG22CS457" value={form.studentId} onChange={handleChange} />
 
           <label className="field-label" htmlFor="department">Department</label>
           <select id="department" name="department" value={form.department} onChange={handleChange}>
             <option value="">Select department</option>
             <option value="CSE">Computer Science</option>
             <option value="ECE">Electronics</option>
-            <option value="ME">Mechanical</option>
-            <option value="CV">Civil</option>
-            <option value="BT">Biotechnology</option>
+            <option value="CSE-AIML">Computer Science - AIML</option>
+            <option value="BBA">Business</option>
+            <option value="PD">Pharmacy</option>
+            <option value="NS">Nursing</option>
           </select>
 
           <label className="field-label" htmlFor="password">Password</label>
