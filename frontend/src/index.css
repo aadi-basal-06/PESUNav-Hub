@@ -156,3 +156,78 @@ hr {
   height: auto;
   display: block;
 }
+
+/* Auth (Login) styles */
+.auth-section {
+  display: flex;
+  justify-content: center;
+}
+.auth-card {
+  width: 100%;
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 2rem 2rem 1.5rem;
+  background: var(--color-white);
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(18, 33, 74, 0.08);
+  border: 2px solid rgba(255, 117, 218, 0.25);
+}
+.auth-icon {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 117, 218, 0.18);
+}
+.auth-heading {
+  margin: 0.25rem 0 0.25rem;
+  text-align: center;
+}
+.auth-subtext {
+  margin: 0 0 1.25rem;
+  color: var(--color-light-navy);
+  text-align: center;
+  font-size: 1.125rem;
+}
+.auth-form {
+  max-width: 520px;
+  margin: 0.25rem auto 0;
+}
+.field-label {
+  display: block;
+  margin: 0.75rem 0 0.25rem;
+  color: var(--color-navy-blue);
+  font-weight: 600;
+}
+.auth-submit-button {
+  width: 100%;
+  margin-top: 1.25rem;
+  padding: 0.85rem 1rem;
+  border: none;
+  border-radius: 12px;
+  background: var(--color-neon-pink);
+  color: var(--color-white);
+  font-weight: 700;
+}
+.auth-submit-button:hover {
+  background: var(--color-soft-pink);
+  color: var(--color-white);
+}
+.auth-register {
+  text-align: center;
+  margin-top: 1rem;
+  color: var(--color-navy-blue);
+}
+.register-link {
+  color: var(--color-neon-pink);
+  font-weight: 700;
+}
+.auth-status {
+  text-align: center;
+  margin: 0.5rem 0 0.75rem;
+  font-weight: 600;
+}
+.auth-status.is-success { color: #16a34a; }
+.auth-status.is-error { color: #dc2626; }
