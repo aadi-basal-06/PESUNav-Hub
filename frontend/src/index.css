@@ -260,11 +260,9 @@ hr {
   border-radius: 50%;
   display: grid;
   place-items: center;
-  color: var(--color-navy-blue);
-  background: #f6f7fb;
-  border: 2px solid var(--color-soft-pink);
+  background: #D3D3D3;
 }
-.avatar-placeholder { font-size: 46px; }
+.avatar-placeholder { font-size: 0; }
 .upload-button {
   margin-top: 0.75rem;
   display: inline-block;
