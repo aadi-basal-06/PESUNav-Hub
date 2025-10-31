@@ -1,7 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 
 const DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
-const DEFAULT_AVATAR = "https://cdn.builder.io/api/v1/image/assets%2Fb07d8b24589c491fafbc50f7886a2e1d%2F79b06a1d8c2f41f08fffda9915416cbf?format=webp&width=800";
 
 function readLS(key, fallback) {
   try {
@@ -98,7 +97,11 @@ export default function Profile() {
     <section className="profile-page">
       <div className="profile-header">
         <div className="avatar-wrapper">
-          <img className="avatar-image" src={previewUrl || DEFAULT_AVATAR} alt="Student avatar" />
+          {previewUrl ? (
+            <img className="avatar-image" src={previewUrl} alt="Student avatar" />
+          ) : (
+            <div className="avatar-placeholder" aria-hidden="true" />
+          )}
           <label className="upload-button">
             <input type="file" accept="image/*" onChange={handleImgChange} />
             Upload Image
