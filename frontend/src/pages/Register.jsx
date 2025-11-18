@@ -36,9 +36,9 @@ export default function Register() {
       <div className="auth-card">
         <div className="auth-icon" aria-hidden="true">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M16 21a4 4 0 1 0-8 0" stroke="var(--color-neon-pink)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            <circle cx="12" cy="11" r="4" stroke="var(--color-neon-pink)" strokeWidth="2"/>
-            <path d="M19 8v6m3-3h-6" stroke="var(--color-neon-pink)" strokeWidth="2" strokeLinecap="round"/>
+            <path d="M16 21a4 4 0 1 0-8 0" stroke="var(--color-dark-grey)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            <circle cx="12" cy="11" r="4" stroke="var(--color-dark-grey)" strokeWidth="2"/>
+            <path d="M19 8v6m3-3h-6" stroke="var(--color-dark-grey)" strokeWidth="2" strokeLinecap="round"/>
           </svg>
         </div>
         <h2 className="auth-heading">Create Account</h2>
