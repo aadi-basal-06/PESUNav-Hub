@@ -4,13 +4,13 @@
   --color-navy-blue: #12214A;        /* Deep navy blue base */
   --color-medium-navy: #1C2A6D;      /* Lighter navy accent */
   --color-light-navy: #6A7CB0;       /* Muted navy highlight */
-  --color-neon-pink: #FF2ACB;        /* Bold neon pink */
-  --color-soft-pink: #FF75DA;        /* Lighter pink accent */
+  --color-dark-grey: #2D3748;        /* Bold dark grey */
+  --color-medium-grey: #4A5568;      /* Medium grey accent */
   --color-white: #FFFFFF;            /* For backgrounds/text */
   --color-golden-yellow: #FFD700;    /* For outlines */
 
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-  color: var(--color-neon-pink);
+  color: var(--color-dark-grey);
   background-color: var(--color-navy-blue);
   line-height: 1.5;
   font-weight: 400;
@@ -26,7 +26,7 @@ body {
   min-height: 100vh;
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   background: var(--color-navy-blue);
-  color: var(--color-neon-pink);
+  color: var(--color-dark-grey);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -34,16 +34,16 @@ body {
 
 a {
   font-weight: 600;
-  color: var(--color-neon-pink);
+  color: var(--color-dark-grey);
   text-decoration: none;
   transition: color 0.2s;
 }
 a:hover {
-  color: var(--color-soft-pink);
+  color: var(--color-medium-grey);
 }
 
 h1, h2, h3, h4, h5 {
-  color: var(--color-neon-pink);
+  color: var(--color-dark-grey);
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 }
 
@@ -54,18 +54,18 @@ h1 {
 
 button {
   border-radius: 8px;
-  border: 2px solid var(--color-neon-pink);
+  border: 2px solid var(--color-dark-grey);
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 600;
   font-family: inherit;
-  background-color: var(--color-soft-pink);
-  color: var(--color-navy-blue);
+  background-color: var(--color-medium-grey);
+  color: var(--color-white);
   cursor: pointer;
   transition: border-color 0.25s, background-color 0.25s, color 0.25s;
 }
 button:hover {
-  background-color: var(--color-neon-pink);
+  background-color: var(--color-dark-grey);
   color: var(--color-white);
 }
 button:focus, button:focus-visible {
@@ -74,7 +74,7 @@ button:focus, button:focus-visible {
 
 input, textarea, select {
   font-family: inherit;
-  border: 1px solid var(--color-neon-pink);
+  border: 1px solid var(--color-dark-grey);
   border-radius: 6px;
   padding: 10px;
   margin: 8px 0;
@@ -88,7 +88,7 @@ input, textarea, select {
 }
 
 input:focus, textarea:focus, select:focus {
-  border-color: var(--color-neon-pink);
+  border-color: var(--color-dark-grey);
   outline-color: #FFB700;
   outline-offset: 4px;
   box-shadow: 0 0 8px 2px rgba(255, 215, 0, 0.7);
@@ -96,22 +96,22 @@ input:focus, textarea:focus, select:focus {
 
 nav {
   background: var(--color-medium-navy);
-  border-bottom: 2px solid var(--color-neon-pink);
+  border-bottom: 2px solid var(--color-dark-grey);
   padding: 1rem;
   border-radius: 12px 12px 0 0;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: var(--color-neon-pink);
+    color: var(--color-dark-grey);
     background-color: var(--color-light-navy);
   }
   a:hover {
-    color: var(--color-soft-pink);
+    color: var(--color-medium-grey);
   }
   button {
-    background-color: var(--color-soft-pink);
-    color: var(--color-navy-blue);
+    background-color: var(--color-medium-grey);
+    color: var(--color-white);
   }
 }
 
@@ -127,7 +127,7 @@ nav {
 
 hr {
   border: none;
-  border-top: 2px solid var(--color-neon-pink);
+  border-top: 2px solid var(--color-dark-grey);
   margin: 0 0 2rem 0;
 }
 
@@ -170,7 +170,7 @@ hr {
   background: var(--color-white);
   border-radius: 16px;
   box-shadow: 0 4px 18px rgba(18, 33, 74, 0.08);
-  border: 2px solid rgba(255, 117, 218, 0.25);
+  border: 2px solid rgba(45, 55, 72, 0.25);
 }
 .auth-icon {
   width: 72px;
@@ -179,7 +179,7 @@ hr {
   border-radius: 50%;
   display: grid;
   place-items: center;
-  background: rgba(255, 117, 218, 0.18);
+  background: rgba(45, 55, 72, 0.18);
 }
 .auth-heading {
   margin: 0.25rem 0 0.25rem;
@@ -187,7 +187,7 @@ hr {
 }
 .auth-subtext {
   margin: 0 0 1.25rem;
-  color: var(--color-light-navy);
+  color: var(--color-medium-grey);
   text-align: center;
   font-size: 1.125rem;
 }
@@ -207,12 +207,12 @@ hr {
   padding: 0.85rem 1rem;
   border: none;
   border-radius: 12px;
-  background: var(--color-neon-pink);
+  background: var(--color-dark-grey);
   color: var(--color-white);
   font-weight: 700;
 }
 .auth-submit-button:hover {
-  background: var(--color-soft-pink);
+  background: var(--color-medium-grey);
   color: var(--color-white);
 }
 .auth-register {
@@ -221,7 +221,7 @@ hr {
   color: var(--color-navy-blue);
 }
 .register-link {
-  color: var(--color-neon-pink);
+  color: var(--color-dark-grey);
   font-weight: 700;
 }
 .auth-status {
@@ -246,7 +246,7 @@ hr {
 .avatar-wrapper {
   background: var(--color-white);
   border-radius: 16px;
-  border: 2px solid rgba(255, 117, 218, 0.25);
+  border: 2px solid rgba(45, 55, 72, 0.25);
   box-shadow: 0 4px 18px rgba(18, 33, 74, 0.08);
   padding: 1rem;
   display: flex;
@@ -268,9 +268,9 @@ hr {
   display: inline-block;
   padding: 0.5rem 0.9rem;
   border-radius: 10px;
-  border: 2px solid var(--color-neon-pink);
+  border: 2px solid var(--color-dark-grey);
   background: var(--color-white);
-  color: var(--color-neon-pink);
+  color: var(--color-dark-grey);
   font-weight: 700;
   cursor: pointer;
 }
@@ -278,7 +278,7 @@ hr {
 .profile-info {
   background: var(--color-white);
   border-radius: 16px;
-  border: 2px solid rgba(255, 117, 218, 0.25);
+  border: 2px solid rgba(45, 55, 72, 0.25);
   box-shadow: 0 4px 18px rgba(18, 33, 74, 0.08);
   padding: 1rem;
 }
@@ -294,7 +294,7 @@ hr {
 .scheduler-section {
   background: var(--color-white);
   border-radius: 16px;
-  border: 2px solid rgba(255, 117, 218, 0.25);
+  border: 2px solid rgba(45, 55, 72, 0.25);
   box-shadow: 0 4px 18px rgba(18, 33, 74, 0.08);
   padding: 1rem;
 }
@@ -314,13 +314,13 @@ hr {
 .add-class-button {
   border: none;
   border-radius: 12px;
-  background: var(--color-neon-pink);
+  background: var(--color-dark-grey);
   color: var(--color-white);
   font-weight: 700;
   padding: 0.6rem 0.9rem;
 }
 .add-class-form {
-  border: 2px dashed rgba(255,117,218,0.35);
+  border: 2px dashed rgba(45,55,72,0.35);
   border-radius: 12px;
   padding: 0.75rem;
   margin-bottom: 0.75rem;
@@ -349,33 +349,33 @@ hr {
   gap: 1rem;
 }
 .filter-card {
-  border: 2px solid rgba(255,117,218,0.35);
+  border: 2px solid rgba(45,55,72,0.35);
   border-radius: 12px;
   padding: 0.75rem;
 }
 .filter-title { color: var(--color-navy-blue); font-weight: 700; margin-bottom: 0.5rem; }
 .filter-list { display: grid; gap: 0.5rem; }
 .filter-button {
-  border: 2px solid rgba(255,117,218,0.4);
+  border: 2px solid rgba(45,55,72,0.4);
   background: var(--color-white);
-  color: var(--color-neon-pink);
+  color: var(--color-dark-grey);
   border-radius: 10px;
   padding: 0.5rem 0.75rem;
   text-align: left;
 }
 .filter-button.is-active {
-  background: var(--color-neon-pink);
+  background: var(--color-dark-grey);
   color: var(--color-white);
 }
 
 .classes-list { display: grid; gap: 0.75rem; }
 .class-card {
   border-radius: 14px;
-  border: 2px solid rgba(255,117,218,0.35);
+  border: 2px solid rgba(45,55,72,0.35);
   padding: 0.75rem 0.9rem;
 }
 .class-header { display: flex; align-items: center; justify-content: space-between; }
-.class-title { margin: 0; color: var(--color-neon-pink); }
+.class-title { margin: 0; color: var(--color-dark-grey); }
 .class-sub { color: var(--color-navy-blue); opacity: 0.8; }
 .day-pill {
   padding: 0.2rem 0.6rem;
@@ -398,7 +398,7 @@ hr {
   font-weight: 700;
 }
 .reminder-toggle.is-off { border-color: #9ca3af; color: #6b7280; background: #f3f4f6; }
-.delete-button { border: 2px solid rgba(255,117,218,0.4); background: var(--color-white); color: var(--color-neon-pink); border-radius: 10px; padding: 0.4rem 0.6rem; }
+.delete-button { border: 2px solid rgba(45,55,72,0.4); background: var(--color-white); color: var(--color-dark-grey); border-radius: 10px; padding: 0.4rem 0.6rem; }
 
 @media (max-width: 860px) {
   .profile-header { grid-template-columns: 1fr; }
