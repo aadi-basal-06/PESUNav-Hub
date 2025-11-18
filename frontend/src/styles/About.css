@@ -1,0 +1,346 @@
+.about-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-section {
+  padding: 3rem 1rem;
+  background: linear-gradient(135deg, rgba(45, 55, 72, 0.1) 0%, rgba(74, 85, 104, 0.1) 100%);
+  text-align: center;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+.hero-section h1 {
+  margin: 0 0 0.5rem;
+  color: var(--color-dark-grey);
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.hero-section h2 {
+  margin: 0 0 1rem;
+  color: var(--color-medium-grey);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.hero-section p {
+  margin: 0;
+  color: var(--color-medium-grey);
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 1rem;
+}
+
+.mission-section,
+.features-section,
+.how-it-works,
+.team-section,
+.values-section,
+.faq-section,
+.contact-cta {
+  padding: 2rem;
+  background: var(--color-white);
+  border: 2px solid rgba(45, 55, 72, 0.15);
+  border-radius: 12px;
+}
+
+.about-content h3 {
+  margin: 0 0 1.5rem;
+  color: var(--color-dark-grey);
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.mission-section p {
+  margin: 0;
+  color: var(--color-medium-grey);
+  font-size: 1rem;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.feature-card {
+  padding: 1.5rem;
+  background: rgba(45, 55, 72, 0.03);
+  border: 2px solid rgba(45, 55, 72, 0.1);
+  border-radius: 12px;
+  transition: all 0.25s ease;
+  text-align: center;
+}
+
+.feature-card:hover {
+  border-color: var(--color-dark-grey);
+  background: rgba(45, 55, 72, 0.08);
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(45, 55, 72, 0.15);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.feature-card h4 {
+  margin: 0 0 0.75rem;
+  color: var(--color-dark-grey);
+  font-size: 1.1rem;
+}
+
+.feature-card p {
+  margin: 0;
+  color: var(--color-medium-grey);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.step {
+  padding: 1.5rem;
+  background: linear-gradient(135deg, rgba(45, 55, 72, 0.05) 0%, rgba(74, 85, 104, 0.05) 100%);
+  border: 2px solid rgba(45, 55, 72, 0.1);
+  border-radius: 12px;
+  position: relative;
+  text-align: center;
+  transition: all 0.25s ease;
+}
+
+.step:hover {
+  border-color: var(--color-dark-grey);
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(45, 55, 72, 0.15);
+}
+
+.step-number {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 1rem;
+  background: var(--color-dark-grey);
+  color: var(--color-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.step h4 {
+  margin: 0 0 0.75rem;
+  color: var(--color-dark-grey);
+  font-size: 1.15rem;
+}
+
+.step p {
+  margin: 0;
+  color: var(--color-medium-grey);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.team-card {
+  padding: 1.5rem;
+  background: rgba(45, 55, 72, 0.03);
+  border: 2px solid rgba(45, 55, 72, 0.1);
+  border-radius: 12px;
+  transition: all 0.25s ease;
+}
+
+.team-card:hover {
+  border-color: var(--color-dark-grey);
+  background: rgba(45, 55, 72, 0.08);
+  transform: translateY(-2px);
+}
+
+.team-card h4 {
+  margin: 0 0 0.75rem;
+  color: var(--color-dark-grey);
+  font-size: 1.1rem;
+}
+
+.team-card p {
+  margin: 0;
+  color: var(--color-medium-grey);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.value-item {
+  padding: 1.5rem;
+  background: rgba(45, 55, 72, 0.03);
+  border-left: 4px solid var(--color-dark-grey);
+  border-radius: 8px;
+  transition: all 0.25s ease;
+}
+
+.value-item:hover {
+  background: rgba(45, 55, 72, 0.08);
+  transform: translateX(4px);
+}
+
+.value-item h4 {
+  margin: 0 0 0.75rem;
+  color: var(--color-dark-grey);
+  font-size: 1.1rem;
+}
+
+.value-item p {
+  margin: 0;
+  color: var(--color-medium-grey);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.faq-items {
+  display: grid;
+  gap: 1rem;
+}
+
+.faq-item {
+  padding: 1.25rem;
+  background: rgba(45, 55, 72, 0.03);
+  border: 1px solid rgba(45, 55, 72, 0.1);
+  border-radius: 8px;
+  transition: all 0.25s ease;
+}
+
+.faq-item:hover {
+  border-color: var(--color-dark-grey);
+  background: rgba(45, 55, 72, 0.08);
+}
+
+.faq-item h4 {
+  margin: 0 0 0.5rem;
+  color: var(--color-dark-grey);
+  font-size: 1rem;
+}
+
+.faq-item p {
+  margin: 0;
+  color: var(--color-medium-grey);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.contact-cta {
+  text-align: center;
+  background: linear-gradient(135deg, rgba(45, 55, 72, 0.05) 0%, rgba(74, 85, 104, 0.05) 100%);
+}
+
+.contact-cta h3 {
+  text-align: center;
+}
+
+.contact-cta p {
+  margin: 0 0 1.5rem;
+  color: var(--color-medium-grey);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.contact-cta strong {
+  color: var(--color-dark-grey);
+  font-weight: 700;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 0.85rem 2rem;
+  background: var(--color-dark-grey);
+  color: var(--color-white);
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: all 0.25s ease;
+}
+
+.cta-button:hover {
+  background: var(--color-medium-grey);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(45, 55, 72, 0.2);
+}
+
+.about-footer {
+  padding: 2rem 1rem;
+  background: rgba(45, 55, 72, 0.05);
+  border-top: 2px solid rgba(45, 55, 72, 0.15);
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.about-footer p {
+  margin: 0.5rem 0;
+  color: var(--color-medium-grey);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 2rem 1rem;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .hero-section h2 {
+    font-size: 1.25rem;
+  }
+
+  .about-content h3 {
+    font-size: 1.5rem;
+  }
+
+  .features-grid,
+  .values-grid,
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .steps {
+    grid-template-columns: 1fr;
+  }
+
+  .step-number {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  .mission-section p {
+    text-align: left;
+  }
+}

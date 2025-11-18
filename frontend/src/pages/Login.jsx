@@ -24,8 +24,8 @@ export default function Login() {
       <div className="auth-card">
         <div className="auth-icon" aria-hidden="true">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 4h7a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1h-7" stroke="var(--color-neon-pink)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            <path d="M15 12H3m0 0 4-4m-4 4 4 4" stroke="var(--color-neon-pink)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M12 4h7a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1h-7" stroke="var(--color-dark-grey)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M15 12H3m0 0 4-4m-4 4 4 4" stroke="var(--color-dark-grey)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
         </div>
         <h2 className="auth-heading">Welcome Back</h2>
