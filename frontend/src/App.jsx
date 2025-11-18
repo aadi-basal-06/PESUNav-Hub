@@ -4,9 +4,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Profile from "./pages/Profile";
 import Map from "./pages/Map";
-import Events from "./pages/Events";
 import StudySpaces from "./pages/StudySpaces";
-import Services from "./pages/Services";
 import Feedback from "./pages/Feedback";
 import Safety from "./pages/Safety";
 import About from "./pages/About";
@@ -20,9 +18,7 @@ export default function App() {
         <Link to="/register">Register</Link>
         <Link to="/profile">Profile</Link>
         <Link to="/map">Map</Link>
-        <Link to="/events">Events</Link>
         <Link to="/study-spaces">Study Spaces</Link>
-        <Link to="/services">Services</Link>
         <Link to="/feedback">Feedback</Link>
         <Link to="/safety">Safety</Link>
         <Link to="/about">About</Link>
@@ -35,9 +31,7 @@ export default function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/map" element={<Map />} />
-          <Route path="/events" element={<Events />} />
           <Route path="/study-spaces" element={<StudySpaces />} />
-          <Route path="/services" element={<Services />} />
           <Route path="/feedback" element={<Feedback />} />
           <Route path="/safety" element={<Safety />} />
           <Route path="/about" element={<About />} />
