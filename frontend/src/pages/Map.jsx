@@ -7,35 +7,35 @@ const studySpaces = [
   {
     id: 1,
     name: "Main Library",
-    coordinates: [12.9265, 77.5997],
+    coordinates: [12.861306, 77.664708],
     description: "Central library with reading rooms and computer lab",
     type: "library"
   },
   {
     id: 2,
     name: "CS Building Study Area",
-    coordinates: [12.9270, 77.6005],
+    coordinates: [12.861500, 77.665000],
     description: "Computer Science block with open study spaces",
     type: "study_area"
   },
   {
     id: 3,
     name: "North Wing Cafe",
-    coordinates: [12.9275, 77.6010],
+    coordinates: [12.861200, 77.665200],
     description: "Casual study space with refreshments",
     type: "cafe"
   },
   {
     id: 4,
     name: "Engineering Lab",
-    coordinates: [12.9260, 77.5990],
+    coordinates: [12.861100, 77.664400],
     description: "Lab facilities for practical study sessions",
     type: "lab"
   },
   {
     id: 5,
     name: "Auditorium Foyer",
-    coordinates: [12.9250, 77.5985],
+    coordinates: [12.861450, 77.664850],
     description: "Open space suitable for group discussions",
     type: "discussion"
   }
@@ -60,7 +60,7 @@ const createCustomIcon = (type) => {
 
 export default function Map() {
   const [selectedSpace, setSelectedSpace] = useState(null);
-  const campusCenter = [12.9265, 77.5997];
+  const campusCenter = [12.861306, 77.664708];
 
   return (
     <section className="map-page">
