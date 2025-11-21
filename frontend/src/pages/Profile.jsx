@@ -37,27 +37,27 @@ export default function Profile() {
     readLS("classSchedule", [
       {
         id: crypto.randomUUID(),
-        title: "Data Structures",
-        instructor: "Dr. Smith",
-        day: "Monday",
-        time: "09:00",
-        room: "Room 301"
-      },
-      {
-        id: crypto.randomUUID(),
-        title: "Operating Systems",
-        instructor: "Prof. Johnson",
-        day: "Monday",
-        time: "11:00",
-        room: "Room 205"
-      },
-      {
-        id: crypto.randomUUID(),
-        title: "Database Management",
-        instructor: "Dr. Williams",
+        title: "Web Technologies",
+        instructor: "Prof. Jeny Jijo",
         day: "Tuesday",
-        time: "14:00",
-        room: "Lab 401"
+        time: "08:00",
+        room: "Semester Hall 6"
+      },
+      {
+        id: crypto.randomUUID(),
+        title: "Data Structures and its Applications",
+        instructor: "Dr. Saritha",
+        day: "Wednesday",
+        time: "10:45",
+        room: "Semester Hall 6"
+      },
+      {
+        id: crypto.randomUUID(),
+        title: "Digital Design and Computer Organization",
+        instructor: "Dr. Swati Priya",
+        day: "Monday",
+        time: "11:30",
+        room: "Class 508"
       }
     ])
   );

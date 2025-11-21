@@ -2,42 +2,143 @@ import { useState } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 import "../styles/Map.css";
+import "leaflet/dist/leaflet.css";
 
 const studySpaces = [
   {
     id: 1,
     name: "Main Library",
-    coordinates: [12.9265, 77.5997],
+    coordinates: [12.861306, 77.664708],
     description: "Central library with reading rooms and computer lab",
-    type: "library"
+    type: "library",
+    block: "Main Block",
+    isPrivate: false
   },
   {
     id: 2,
-    name: "CS Building Study Area",
-    coordinates: [12.9270, 77.6005],
-    description: "Computer Science block with open study spaces",
-    type: "study_area"
+    name: "MRD Block Private Library",
+    coordinates: [12.863669, 77.665871],
+    description: "Private library in MRD block with focused study environment",
+    type: "library",
+    block: "MRD Block",
+    isPrivate: true
   },
   {
     id: 3,
-    name: "North Wing Cafe",
-    coordinates: [12.9275, 77.6010],
-    description: "Casual study space with refreshments",
-    type: "cafe"
+    name: "PESU Venture Labs",
+    coordinates: [12.861434, 77.663972],
+    description: "Private library and collaborative workspace in Mech block",
+    type: "library",
+    block: "Mech Block, 6th Floor",
+    isPrivate: true
   },
   {
     id: 4,
-    name: "Engineering Lab",
-    coordinates: [12.9260, 77.5990],
-    description: "Lab facilities for practical study sessions",
-    type: "lab"
+    name: "Semester Halls Ground Floor",
+    coordinates: [12.861306, 77.664708],
+    description: "Semester halls study areas on ground floor",
+    type: "study_area",
+    block: "Main Block, Ground Floor",
+    isPrivate: false
   },
   {
     id: 5,
-    name: "Auditorium Foyer",
-    coordinates: [12.9250, 77.5985],
-    description: "Open space suitable for group discussions",
-    type: "discussion"
+    name: "Semester Halls Ground Floor 2",
+    coordinates: [12.861904, 77.664308],
+    description: "Semester halls study areas on ground floor",
+    type: "study_area",
+    block: "Main Block, Ground Floor",
+    isPrivate: false
+  },
+  {
+    id: 6,
+    name: "Semester Halls 5th Floor",
+    coordinates: [12.861250, 77.664950],
+    description: "Semester halls study areas on 5th floor",
+    type: "study_area",
+    block: "Main Block, 5th Floor",
+    isPrivate: false
+  },
+  {
+    id: 7,
+    name: "Semester Halls 6th Floor",
+    coordinates: [12.861300, 77.665000],
+    description: "Semester halls study areas on 6th floor",
+    type: "study_area",
+    block: "Main Block, 6th Floor",
+    isPrivate: false
+  },
+  {
+    id: 8,
+    name: "4th Floor Canteen",
+    coordinates: [12.861365, 77.664228],
+    description: "Casual study space with refreshments on 4th floor",
+    type: "cafe",
+    block: "Main Block, 4th Floor",
+    isPrivate: false
+  },
+  {
+    id: 9,
+    name: "5th Floor Canteen",
+    coordinates: [12.861365, 77.664228],
+    description: "Study space with food and beverage options on 5th floor",
+    type: "cafe",
+    block: "Main Block, 5th Floor",
+    isPrivate: false
+  },
+  {
+    id: 10,
+    name: "Pixel Canteen",
+    coordinates: [12.862714, 77.664923],
+    description: "Modern canteen with comfortable seating for study breaks",
+    type: "cafe",
+    block: "Main Block",
+    isPrivate: false
+  },
+  {
+    id: 11,
+    name: "Vakula Mess",
+    coordinates: [12.863669, 77.665871],
+    description: "Mess facility with casual dining and study spaces",
+    type: "cafe",
+    block: "MRD Block",
+    isPrivate: false
+  },
+  {
+    id: 12,
+    name: "PESU Venture Labs (Lab)",
+    coordinates: [12.861434, 77.663972],
+    description: "Lab facilities in Mech block for practical study sessions",
+    type: "lab",
+    block: "Mech Block, 6th Floor",
+    isPrivate: false
+  },
+  {
+    id: 13,
+    name: "Quadrangle",
+    coordinates: [12.861598, 77.66454],
+    description: "Open space suitable for group discussions and outdoor studying",
+    type: "discussion",
+    block: "Main Block",
+    isPrivate: false
+  },
+  {
+    id: 14,
+    name: "4th Floor Canteen (Discussion)",
+    coordinates: [12.861365, 77.664228],
+    description: "4th floor canteen used for group discussions and collaboration",
+    type: "discussion",
+    block: "Main Block, 4th Floor",
+    isPrivate: false
+  },
+  {
+    id: 15,
+    name: "5th Floor Canteen (Discussion)",
+    coordinates: [12.861365, 77.664228],
+    description: "5th floor canteen space for group discussions and meetings",
+    type: "discussion",
+    block: "Main Block, 5th Floor",
+    isPrivate: false
   }
 ];
 
@@ -60,7 +161,7 @@ const createCustomIcon = (type) => {
 
 export default function Map() {
   const [selectedSpace, setSelectedSpace] = useState(null);
-  const campusCenter = [12.9265, 77.5997];
+  const campusCenter = [12.861306, 77.664708];
 
   return (
     <section className="map-page">

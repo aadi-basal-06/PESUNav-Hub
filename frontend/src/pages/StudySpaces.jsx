@@ -7,50 +7,165 @@ const studySpacesData = [
     name: "Main Library",
     type: "library",
     description: "Central library with reading rooms and computer lab",
-    features: ["Silent reading zones", "Computer lab", "Group study rooms", "WiFi"],
+    features: ["Silent reading zones", "Computer lab", "Group study rooms", "WiFi", "AC"],
     capacity: "500+",
     hours: "8:00 AM - 10:00 PM",
-    location: "Building A, 1st Floor"
+    location: "Main Block, Ground Floor",
+    isPrivate: false
   },
   {
     id: 2,
-    name: "CS Building Study Area",
-    type: "study_area",
-    description: "Computer Science block with open study spaces",
-    features: ["Collaborative spaces", "High-speed internet", "Power outlets", "Open seating"],
-    capacity: "200+",
-    hours: "9:00 AM - 9:00 PM",
-    location: "CS Block, Ground Floor"
+    name: "MRD Block Private Library",
+    type: "library",
+    description: "Private library in MRD block with focused and quiet study environment",
+    features: ["Quiet study environment", "Individual study cubicles", "WiFi", "AC", "Limited capacity"],
+    capacity: "80+",
+    hours: "8:00 AM - 10:00 PM",
+    location: "MRD Block (12.863669, 77.665871)",
+    isPrivate: true
   },
   {
     id: 3,
-    name: "North Wing Cafe",
-    type: "cafe",
-    description: "Casual study space with refreshments",
-    features: ["Snacks & beverages", "Casual seating", "WiFi", "Background music"],
+    name: "PESU Venture Labs (Private Library)",
+    type: "library",
+    description: "Private library and collaborative workspace for research and development",
+    features: ["Research materials", "Quiet zones", "Collaborative spaces", "WiFi", "AC", "Technical resources"],
     capacity: "100+",
-    hours: "7:30 AM - 8:00 PM",
-    location: "North Wing, East Side"
+    hours: "8:00 AM - 10:00 PM",
+    location: "Mech Block, 6th Floor (12.861434, 77.663972)",
+    isPrivate: true
   },
   {
     id: 4,
-    name: "Engineering Lab",
-    type: "lab",
-    description: "Lab facilities for practical study sessions",
-    features: ["Lab equipment", "Project workspace", "Technical support", "Booking required"],
-    capacity: "60+",
-    hours: "8:00 AM - 6:00 PM",
-    location: "Engineering Block, 2nd Floor"
+    name: "Semester Halls Ground Floor",
+    type: "study_area",
+    description: "Semester halls study areas on ground floor with comfortable seating",
+    features: ["Open seating", "Good lighting", "Whiteboard walls", "WiFi", "AC"],
+    capacity: "150+",
+    hours: "8:00 AM - 9:00 PM",
+    location: "Main Block, Ground Floor (12.861306, 77.664708)",
+    isPrivate: false
   },
   {
     id: 5,
-    name: "Auditorium Foyer",
-    type: "discussion",
-    description: "Open space suitable for group discussions",
-    features: ["Group discussion", "Whiteboard walls", "Comfortable seating", "No noise restrictions"],
+    name: "Semester Halls Ground Floor 2",
+    type: "study_area",
+    description: "Semester halls study areas on ground floor with collaborative spaces",
+    features: ["Flexible seating", "Group study zones", "Power outlets", "WiFi", "AC"],
     capacity: "150+",
     hours: "8:00 AM - 9:00 PM",
-    location: "Central Building, Foyer"
+    location: "Main Block, Ground Floor (12.861904, 77.664308)",
+    isPrivate: false
+  },
+  {
+    id: 6,
+    name: "Semester Halls 5th Floor",
+    type: "study_area",
+    description: "Semester halls study areas on 5th floor with modern amenities",
+    features: ["Modern furniture", "Breakout areas", "High-speed internet", "Power outlets", "AC"],
+    capacity: "150+",
+    hours: "8:00 AM - 9:00 PM",
+    location: "Main Block, 5th Floor (12.861250, 77.664950)",
+    isPrivate: false
+  },
+  {
+    id: 7,
+    name: "Semester Halls 6th Floor",
+    type: "study_area",
+    description: "Semester halls study areas on 6th floor with modern amenities",
+    features: ["Modern furniture", "Breakout areas", "High-speed internet", "Power outlets", "AC"],
+    capacity: "150+",
+    hours: "8:00 AM - 9:00 PM",
+    location: "Main Block, 6th Floor (12.861300, 77.665000)",
+    isPrivate: false
+  },
+  {
+    id: 8,
+    name: "4th Floor Canteen",
+    type: "cafe",
+    description: "Casual study space with refreshments on 4th floor",
+    features: ["Snacks & beverages", "Comfortable seating", "WiFi", "AC", "Food court"],
+    capacity: "120+",
+    hours: "7:30 AM - 8:00 PM",
+    location: "Main Block, 4th Floor (12.861365, 77.664228)",
+    isPrivate: false
+  },
+  {
+    id: 9,
+    name: "5th Floor Canteen",
+    type: "cafe",
+    description: "Study space with food and beverage options on 5th floor",
+    features: ["Variety of food", "Quick service", "WiFi", "AC", "Casual tables"],
+    capacity: "120+",
+    hours: "7:30 AM - 8:00 PM",
+    location: "Main Block, 5th Floor (12.861365, 77.664228)",
+    isPrivate: false
+  },
+  {
+    id: 10,
+    name: "Pixel Canteen",
+    type: "cafe",
+    description: "Modern canteen with comfortable seating for study breaks",
+    features: ["Contemporary design", "Quality food", "WiFi", "AC", "Charging stations"],
+    capacity: "100+",
+    hours: "7:30 AM - 8:00 PM",
+    location: "Main Block (12.862714, 77.664923)",
+    isPrivate: false
+  },
+  {
+    id: 11,
+    name: "Vakula Mess",
+    type: "cafe",
+    description: "Mess facility with casual dining and study spaces",
+    features: ["Affordable meals", "Quick bites", "Casual atmosphere", "WiFi", "AC"],
+    capacity: "200+",
+    hours: "7:30 AM - 8:00 PM",
+    location: "MRD Block (12.863669, 77.665871)",
+    isPrivate: false
+  },
+  {
+    id: 12,
+    name: "PESU Venture Labs",
+    type: "lab",
+    description: "Lab facilities for practical study sessions and project work",
+    features: ["Lab equipment", "Project workspace", "Technical support", "WiFi", "AC", "Booking required"],
+    capacity: "80+",
+    hours: "8:00 AM - 6:00 PM",
+    location: "Mech Block, 6th Floor (12.861434, 77.663972)",
+    isPrivate: false
+  },
+  {
+    id: 13,
+    name: "Quadrangle",
+    type: "discussion",
+    description: "Open space suitable for group discussions and outdoor studying",
+    features: ["Open-air seating", "Flexible layout", "Good natural lighting", "Outdoor environment"],
+    capacity: "200+",
+    hours: "8:00 AM - 6:00 PM",
+    location: "Main Block (12.861598, 77.66454)",
+    isPrivate: false
+  },
+  {
+    id: 14,
+    name: "4th Floor Canteen (Discussion Space)",
+    type: "discussion",
+    description: "4th floor canteen used for group discussions and collaboration",
+    features: ["Group tables", "Casual environment", "WiFi", "AC", "Food service nearby"],
+    capacity: "120+",
+    hours: "7:30 AM - 8:00 PM",
+    location: "Main Block, 4th Floor (12.861365, 77.664228)",
+    isPrivate: false
+  },
+  {
+    id: 15,
+    name: "5th Floor Canteen (Discussion Space)",
+    type: "discussion",
+    description: "5th floor canteen space for group discussions and meetings",
+    features: ["Spacious layout", "Collaborative seating", "WiFi", "AC", "Central location"],
+    capacity: "120+",
+    hours: "7:30 AM - 8:00 PM",
+    location: "Main Block, 5th Floor (12.861365, 77.664228)",
+    isPrivate: false
   }
 ];
 
@@ -104,7 +219,21 @@ export default function StudySpaces() {
               onClick={() => setSelectedSpace(space)}
             >
               <div className="space-card-header">
-                <h3>{space.name}</h3>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <h3>{space.name}</h3>
+                  {space.isPrivate && (
+                    <span style={{
+                      backgroundColor: '#dc2626',
+                      color: 'white',
+                      padding: '2px 6px',
+                      borderRadius: '3px',
+                      fontSize: '0.7em',
+                      fontWeight: 'bold'
+                    }}>
+                      🔒 PRIVATE
+                    </span>
+                  )}
+                </div>
                 <span className={`type-badge ${space.type}`}>{typeLabels[space.type]}</span>
               </div>
               <p className="space-description">{space.description}</p>
@@ -126,9 +255,23 @@ export default function StudySpaces() {
           <div className="space-details-panel">
             <button className="close-btn" onClick={() => setSelectedSpace(null)}>✕</button>
             <div className="details-content">
-              <h3>{selectedSpace.name}</h3>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                <h3>{selectedSpace.name}</h3>
+                {selectedSpace.isPrivate && (
+                  <span style={{
+                    backgroundColor: '#dc2626',
+                    color: 'white',
+                    padding: '4px 8px',
+                    borderRadius: '4px',
+                    fontSize: '0.75em',
+                    fontWeight: 'bold'
+                  }}>
+                    🔒 PRIVATE
+                  </span>
+                )}
+              </div>
               <p className="details-description">{selectedSpace.description}</p>
-              
+
               <div className="details-section">
                 <h4>Features</h4>
                 <ul className="features-list">
