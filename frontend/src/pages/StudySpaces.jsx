@@ -208,7 +208,21 @@ export default function StudySpaces() {
               onClick={() => setSelectedSpace(space)}
             >
               <div className="space-card-header">
-                <h3>{space.name}</h3>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <h3>{space.name}</h3>
+                  {space.isPrivate && (
+                    <span style={{
+                      backgroundColor: '#dc2626',
+                      color: 'white',
+                      padding: '2px 6px',
+                      borderRadius: '3px',
+                      fontSize: '0.7em',
+                      fontWeight: 'bold'
+                    }}>
+                      🔒 PRIVATE
+                    </span>
+                  )}
+                </div>
                 <span className={`type-badge ${space.type}`}>{typeLabels[space.type]}</span>
               </div>
               <p className="space-description">{space.description}</p>
