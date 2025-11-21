@@ -105,36 +105,36 @@ const studySpaces = [
     isPrivate: false
   },
   {
-    id: 11,
+    id: 12,
     name: "PESU Venture Labs (Lab)",
-    coordinates: [12.861000, 77.664500],
+    coordinates: [12.861434, 77.663972],
     description: "Lab facilities in Mech block for practical study sessions",
     type: "lab",
     block: "Mech Block, 6th Floor",
     isPrivate: false
   },
   {
-    id: 12,
+    id: 13,
     name: "Quadrangle",
-    coordinates: [12.861400, 77.665000],
+    coordinates: [12.861598, 77.66454],
     description: "Open space suitable for group discussions and outdoor studying",
     type: "discussion",
     block: "Main Block",
     isPrivate: false
   },
   {
-    id: 13,
+    id: 14,
     name: "4th Floor Canteen (Discussion)",
-    coordinates: [12.861150, 77.664850],
+    coordinates: [12.861365, 77.664228],
     description: "4th floor canteen used for group discussions and collaboration",
     type: "discussion",
     block: "Main Block, 4th Floor",
     isPrivate: false
   },
   {
-    id: 14,
+    id: 15,
     name: "5th Floor Canteen (Discussion)",
-    coordinates: [12.861200, 77.664900],
+    coordinates: [12.861365, 77.664228],
     description: "5th floor canteen space for group discussions and meetings",
     type: "discussion",
     block: "Main Block, 5th Floor",
