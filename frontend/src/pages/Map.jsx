@@ -9,35 +9,126 @@ const studySpaces = [
     name: "Main Library",
     coordinates: [12.861306, 77.664708],
     description: "Central library with reading rooms and computer lab",
-    type: "library"
+    type: "library",
+    block: "Main Block",
+    isPrivate: false
   },
   {
     id: 2,
-    name: "CS Building Study Area",
-    coordinates: [12.861500, 77.665000],
-    description: "Computer Science block with open study spaces",
-    type: "study_area"
+    name: "MRD Block Private Library",
+    coordinates: [12.861600, 77.665100],
+    description: "Private library in MRD block with focused study environment",
+    type: "library",
+    block: "MRD Block",
+    isPrivate: true
   },
   {
     id: 3,
-    name: "North Wing Cafe",
-    coordinates: [12.861200, 77.665200],
-    description: "Casual study space with refreshments",
-    type: "cafe"
+    name: "PESU Venture Labs",
+    coordinates: [12.861000, 77.664500],
+    description: "Private library and collaborative workspace in Mech block",
+    type: "library",
+    block: "Mech Block, 6th Floor",
+    isPrivate: true
   },
   {
     id: 4,
-    name: "Engineering Lab",
-    coordinates: [12.861100, 77.664400],
-    description: "Lab facilities for practical study sessions",
-    type: "lab"
+    name: "Semester Halls 1st Floor",
+    coordinates: [12.861200, 77.664900],
+    description: "Semester halls study areas on 1st floor",
+    type: "study_area",
+    block: "Main Block, 1st Floor",
+    isPrivate: false
   },
   {
     id: 5,
-    name: "Auditorium Foyer",
-    coordinates: [12.861450, 77.664850],
-    description: "Open space suitable for group discussions",
-    type: "discussion"
+    name: "Semester Halls 5th Floor",
+    coordinates: [12.861250, 77.664950],
+    description: "Semester halls study areas on 5th floor",
+    type: "study_area",
+    block: "Main Block, 5th Floor",
+    isPrivate: false
+  },
+  {
+    id: 6,
+    name: "Semester Halls 6th Floor",
+    coordinates: [12.861300, 77.665000],
+    description: "Semester halls study areas on 6th floor",
+    type: "study_area",
+    block: "Main Block, 6th Floor",
+    isPrivate: false
+  },
+  {
+    id: 7,
+    name: "4th Floor Canteen",
+    coordinates: [12.861150, 77.664850],
+    description: "Casual study space with refreshments on 4th floor",
+    type: "cafe",
+    block: "Main Block, 4th Floor",
+    isPrivate: false
+  },
+  {
+    id: 8,
+    name: "5th Floor Canteen",
+    coordinates: [12.861200, 77.664900],
+    description: "Study space with food and beverage options on 5th floor",
+    type: "cafe",
+    block: "Main Block, 5th Floor",
+    isPrivate: false
+  },
+  {
+    id: 9,
+    name: "Pixel Canteen",
+    coordinates: [12.861100, 77.664800],
+    description: "Modern canteen with comfortable seating for study breaks",
+    type: "cafe",
+    block: "Main Block",
+    isPrivate: false
+  },
+  {
+    id: 10,
+    name: "Vakula Mess",
+    coordinates: [12.861350, 77.665050],
+    description: "Mess facility with casual dining and study spaces",
+    type: "cafe",
+    block: "Main Block",
+    isPrivate: false
+  },
+  {
+    id: 11,
+    name: "PESU Venture Labs (Lab)",
+    coordinates: [12.861000, 77.664500],
+    description: "Lab facilities in Mech block for practical study sessions",
+    type: "lab",
+    block: "Mech Block, 6th Floor",
+    isPrivate: false
+  },
+  {
+    id: 12,
+    name: "Quadrangle",
+    coordinates: [12.861400, 77.665000],
+    description: "Open space suitable for group discussions and outdoor studying",
+    type: "discussion",
+    block: "Main Block",
+    isPrivate: false
+  },
+  {
+    id: 13,
+    name: "4th Floor Canteen (Discussion)",
+    coordinates: [12.861150, 77.664850],
+    description: "4th floor canteen used for group discussions and collaboration",
+    type: "discussion",
+    block: "Main Block, 4th Floor",
+    isPrivate: false
+  },
+  {
+    id: 14,
+    name: "5th Floor Canteen (Discussion)",
+    coordinates: [12.861200, 77.664900],
+    description: "5th floor canteen space for group discussions and meetings",
+    type: "discussion",
+    block: "Main Block, 5th Floor",
+    isPrivate: false
   }
 ];
 
