@@ -55,9 +55,10 @@ FIELD BREAKDOWN:
    Purpose: Store student's full name
    
    Example Values:
-     - "John Smith"
-     - "Jane Doe"
      - "Aadi Basal"
+     - "John Doe"
+     - "Aditya Kumar"
+     - "Himansh Ahuja"
    
    Database Behavior:
      - Not indexed (searches by email instead)
