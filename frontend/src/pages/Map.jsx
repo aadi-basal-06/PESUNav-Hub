@@ -17,7 +17,7 @@ const studySpaces = [
   {
     id: 2,
     name: "MRD Block Private Library",
-    coordinates: [12.861600, 77.665100],
+    coordinates: [12.863669, 77.665871],
     description: "Private library in MRD block with focused study environment",
     type: "library",
     block: "MRD Block",
@@ -26,7 +26,7 @@ const studySpaces = [
   {
     id: 3,
     name: "PESU Venture Labs",
-    coordinates: [12.861000, 77.664500],
+    coordinates: [12.861434, 77.663972],
     description: "Private library and collaborative workspace in Mech block",
     type: "library",
     block: "Mech Block, 6th Floor",
@@ -34,15 +34,24 @@ const studySpaces = [
   },
   {
     id: 4,
-    name: "Semester Halls 1st Floor",
-    coordinates: [12.861200, 77.664900],
-    description: "Semester halls study areas on 1st floor",
+    name: "Semester Halls Ground Floor",
+    coordinates: [12.861306, 77.664708],
+    description: "Semester halls study areas on ground floor",
     type: "study_area",
-    block: "Main Block, 1st Floor",
+    block: "Main Block, Ground Floor",
     isPrivate: false
   },
   {
     id: 5,
+    name: "Semester Halls Ground Floor 2",
+    coordinates: [12.861904, 77.664308],
+    description: "Semester halls study areas on ground floor",
+    type: "study_area",
+    block: "Main Block, Ground Floor",
+    isPrivate: false
+  },
+  {
+    id: 6,
     name: "Semester Halls 5th Floor",
     coordinates: [12.861250, 77.664950],
     description: "Semester halls study areas on 5th floor",
@@ -51,7 +60,7 @@ const studySpaces = [
     isPrivate: false
   },
   {
-    id: 6,
+    id: 7,
     name: "Semester Halls 6th Floor",
     coordinates: [12.861300, 77.665000],
     description: "Semester halls study areas on 6th floor",
@@ -60,39 +69,39 @@ const studySpaces = [
     isPrivate: false
   },
   {
-    id: 7,
+    id: 8,
     name: "4th Floor Canteen",
-    coordinates: [12.861150, 77.664850],
+    coordinates: [12.861365, 77.664228],
     description: "Casual study space with refreshments on 4th floor",
     type: "cafe",
     block: "Main Block, 4th Floor",
     isPrivate: false
   },
   {
-    id: 8,
+    id: 9,
     name: "5th Floor Canteen",
-    coordinates: [12.861200, 77.664900],
+    coordinates: [12.861365, 77.664228],
     description: "Study space with food and beverage options on 5th floor",
     type: "cafe",
     block: "Main Block, 5th Floor",
     isPrivate: false
   },
   {
-    id: 9,
+    id: 10,
     name: "Pixel Canteen",
-    coordinates: [12.861100, 77.664800],
+    coordinates: [12.862714, 77.664923],
     description: "Modern canteen with comfortable seating for study breaks",
     type: "cafe",
     block: "Main Block",
     isPrivate: false
   },
   {
-    id: 10,
+    id: 11,
     name: "Vakula Mess",
-    coordinates: [12.861350, 77.665050],
+    coordinates: [12.863669, 77.665871],
     description: "Mess facility with casual dining and study spaces",
     type: "cafe",
-    block: "Main Block",
+    block: "MRD Block",
     isPrivate: false
   },
   {
