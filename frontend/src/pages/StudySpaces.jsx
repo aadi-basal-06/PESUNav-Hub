@@ -230,9 +230,23 @@ export default function StudySpaces() {
           <div className="space-details-panel">
             <button className="close-btn" onClick={() => setSelectedSpace(null)}>✕</button>
             <div className="details-content">
-              <h3>{selectedSpace.name}</h3>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                <h3>{selectedSpace.name}</h3>
+                {selectedSpace.isPrivate && (
+                  <span style={{
+                    backgroundColor: '#dc2626',
+                    color: 'white',
+                    padding: '4px 8px',
+                    borderRadius: '4px',
+                    fontSize: '0.75em',
+                    fontWeight: 'bold'
+                  }}>
+                    🔒 PRIVATE
+                  </span>
+                )}
+              </div>
               <p className="details-description">{selectedSpace.description}</p>
-              
+
               <div className="details-section">
                 <h4>Features</h4>
                 <ul className="features-list">
